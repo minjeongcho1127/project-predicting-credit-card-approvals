@@ -7,15 +7,15 @@
 - However, this [blog](http://rstudio-pubs-static.s3.amazonaws.com/73039_9946de135c0a49daa7a0a9eda4a67a72.html) gives a good overview of the probable features (i.e. Gender, Age, Debt, Married, BankCustomer, EducationLevel, Ethnicity, YearsEmployed, PriorDefault, Employed, CreditScore, DriversLicense, Citizen, ZipCode, Income, ApprovalStatus).
 
 ### - Table of Contents
-- 1. [Exploratory Data Analysis](#1.-Exploratory-Data-Analysis)
-- 2. [Data Preprocessing and Feature Engineering](#2.-Data-Preprocessing-and-Feature-Engineering)
-    - 2.1 [Missing Values](#2.1-Missing-Values)
-    - 2.2 [Feature Engineering](#2.2-Feature-Engineering)
-- 3. [Modeling and Evaluation](#3.-Modeling-and-Evaluation)
-    - 3.1 [Logistic Regression](#3.1-Logistic-Regression)
-    - 3.2 [GridSearchCV](#3.2-GridSearchCV)
+1. [Exploratory Data Analysis](#exploratory-data-analysis)
+2. [Data Preprocessing and Feature Engineering](#data-preprocessing-and-feature-engineering)
+    - 2.1 [Missing Values](#missing-values)
+    - 2.2 [Feature Engineering](#feature-engineering)
+3. [Modeling and Evaluation](#modeling-and-evaluation)
+    - 3.1 [Logistic Regression](#logistic-regression)
+    - 3.2 [GridSearchCV](#gridsearchcv)
 
-## 1. Exploratory Data Analysis
+## Exploratory Data Analysis
 
 
 ```python
@@ -33,6 +33,7 @@ cc_apps.head()
 
 
 <div>
+<!--
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -46,6 +47,7 @@ cc_apps.head()
         text-align: right;
     }
 </style>
+-->
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -233,6 +235,7 @@ cc_apps.tail(20)
 
 
 <div>
+<!--
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -246,6 +249,7 @@ cc_apps.tail(20)
         text-align: right;
     }
 </style>
+-->
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -659,8 +663,8 @@ cc_apps.tail(20)
 - The dataset also contains values from several ranges. 
 - The dataset has missing values, which are labeled with '?'.
 
-## 2. Data Preprocessing and Feature Engineering
-### 2.1 Missing Values
+## Data Preprocessing and Feature Engineering
+### Missing Values
 - I will replace the missing values with NaN and impute the missing values with mean imputation.
 
 
@@ -740,7 +744,7 @@ cc_apps.isnull().sum()
 
 
 
-### 2.2 Feature Engineering
+### Feature Engineering
 - I will convert all the non-numeric values into numeric one using the label encoding technique.
 
 
@@ -791,8 +795,8 @@ rescaledX_train = scaler.fit_transform(X_train)
 rescaledX_test = scaler.transform(X_test)
 ```
 
-## 3. Modeling and Evaluation
-### 3.1 Logistic Regression
+## Modeling and Evaluation
+### Logistic Regression
 - I will use a Logistic Regression model and take a look at the model's confusion matrix. Checking confusion matrix is important because in the case of predicting credit card applications, it is equally important to see if the model is able to predict the approval status of the applications as denied that originally got denied.
 
 
@@ -834,7 +838,7 @@ print(confusion_matrix(y_test, y_pred))
      [27 98]]
 
 
-### 3.2 GridSearchCV
+### GridSearchCV
 - To improve the model performance (accuracy score of 84%), I will perform a grid search of logistic regression's hyperparameters 'tol' and 'max_iter'.
 - I will also perform a cross-validation of 5 folds.
 
