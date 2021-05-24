@@ -6,6 +6,16 @@
 - Since this data is confidential, the contributor of this dataset has anonymized the feature names.
 - However, this [blog](http://rstudio-pubs-static.s3.amazonaws.com/73039_9946de135c0a49daa7a0a9eda4a67a72.html) gives a good overview of the probable features (i.e. Gender, Age, Debt, Married, BankCustomer, EducationLevel, Ethnicity, YearsEmployed, PriorDefault, Employed, CreditScore, DriversLicense, Citizen, ZipCode, Income, ApprovalStatus).
 
+### - Python Libraries Used
+- pandas, numpy, sklearn
+
+### - File Descriptions
+- datasets/cc_approvals.data: the dataset described above
+- Predicting-Credit-Card-Approvals.ipynb: Jupyter Notebook used for predicting credit card approvals
+
+### - Acknowledgement
+- This work is based on [DataCamp projects](https://www.datacamp.com/projects) and DataCamp has [agreed](https://support.datacamp.com/hc/en-us/articles/360006091334-DataCamp-Projects-An-Overview) to add projects to a personal portfolio.
+
 ### - Table of Contents
 1. [Exploratory Data Analysis](#exploratory-data-analysis)
 2. [Data Preprocessing and Feature Engineering](#data-preprocessing-and-feature-engineering)
