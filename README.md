@@ -13,7 +13,7 @@
 - datasets/cc_approvals.data: the dataset described above
 - Predicting-Credit-Card-Approvals.ipynb: Jupyter Notebook used for predicting credit card approvals
 
-### - Acknowledgement
+### - Acknowledgment
 - This work is based on [DataCamp projects](https://www.datacamp.com/projects) and DataCamp has [agreed](https://support.datacamp.com/hc/en-us/articles/360006091334-DataCamp-Projects-An-Overview) to add projects to a personal portfolio.
 
 ### - Table of Contents
