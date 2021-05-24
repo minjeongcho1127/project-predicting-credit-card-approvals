@@ -884,6 +884,3 @@ print("Best: %f using %s" % (best_score, best_params))
 ```
 
     Best: 0.850725 using {'max_iter': 100, 'tol': 0.01}
-
-
-- Reference: [DataCamp](https://www.datacamp.com/)
